@@ -1,0 +1,17 @@
+x = int(input())
+
+
+def Timer(x):
+    if(x<24): return round(x)
+
+    if(x >= 360*24):
+     print(int(x/(360*24)), "năm")
+     return Timer((x/(360*24) - int(x/(360*24)))*360*24)
+    elif(x >= 24*30):
+     print(int(x/(24*30)), "tháng")
+     return Timer((x/(24*30) - int(x/(24*30)))*24*30)
+    elif(x>=24):
+     print(int(x/24), "ngày")   
+     return Timer((x/24 - int(x/24))*24)
+
+print(Timer(x), "giờ")
